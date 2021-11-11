@@ -1,5 +1,5 @@
 {% set name = "cmyt" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cmyt-{{ version }}.tar.gz
-  sha256: 9090d477cb9e11c1067887489112ffc6fb5fbaaa994dd111167c04d90dd51e34
+  sha256: 51e02d2ea4120ca593225ca4ad72bfc72399baf2193f2370393afd57e41981aa
 
 build:
   number: 0
@@ -41,7 +41,7 @@ about:
   summary: A collection of Matplotlib colormaps from the yt project
   dev_url: https://github.com/yt-project/cmyt/
   license: BSD-3-Clause
-  license_family: "BSD"
+  license_family: BSD
   license_file: LICENSE
 
 extra:
