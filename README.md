@@ -1,11 +1,11 @@
-About cmyt
-==========
+About cmyt-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cmyt-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/yt-project/yt
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cmyt-feedstock/blob/main/LICENSE.txt)
 
 Summary: A collection of Matplotlib colormaps from the yt project
 
