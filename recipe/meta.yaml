@@ -18,11 +18,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.9
   run:
     - matplotlib-base >=3.5.0
-    - numpy >=1.17.4
-    - python >=3.8
+    - numpy >=1.19.3
+    - python >=3.9
 
 test:
   imports:
