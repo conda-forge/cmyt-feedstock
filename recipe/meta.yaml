@@ -1,5 +1,5 @@
 {% set name = "cmyt" %}
-{% set version = "1.4.0" %}
+{% set version = "2.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cmyt-{{ version }}.tar.gz
-  sha256: f98fd94a5a07107deaed7f31baed077e65ebe22835bab76b2f441b865cd6ce8b
+  sha256: 4beef670f488818efc6ac30491bae81b63a71590936e8cdd3dc3fc9027ab4bfd
 
 build:
   number: 0
