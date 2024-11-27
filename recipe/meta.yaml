@@ -1,6 +1,6 @@
 {% set name = "cmyt" %}
 {% set version = "2.0.1" %}
-
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -17,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - matplotlib-base >=3.8.0
     - numpy >=1.26.0
 
@@ -32,6 +32,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
