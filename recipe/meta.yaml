@@ -1,14 +1,14 @@
 {% set name = "cmyt" %}
-{% set version = "2.0.0" %}
-
+{% set version = "2.0.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cmyt-{{ version }}.tar.gz
-  sha256: 4beef670f488818efc6ac30491bae81b63a71590936e8cdd3dc3fc9027ab4bfd
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cmyt-{{ version }}.tar.gz
+  sha256: a24c5cf765458fa8ed6b70c37d9531cdd8ae79ae96f916d26a3c3c169b18346e
 
 build:
   number: 0
@@ -17,12 +17,13 @@ build:
 
 requirements:
   host:
+    - python {{ python_min }}
+    - hatchling
     - pip
-    - python >=3.9
   run:
-    - matplotlib-base >=3.5.0
-    - numpy >=1.19.3
-    - python >=3.9
+    - python >={{ python_min }}
+    - matplotlib-base >=3.8.0
+    - numpy >=1.26.0
 
 test:
   imports:
@@ -31,6 +32,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
