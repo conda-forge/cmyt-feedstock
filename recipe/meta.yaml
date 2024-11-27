@@ -17,12 +17,13 @@ build:
 
 requirements:
   host:
+    - python >=3.10
+    - hatchling
     - pip
-    - python >=3.9
   run:
-    - matplotlib-base >=3.5.0
-    - numpy >=1.19.3
-    - python >=3.9
+    - python >=3.10
+    - matplotlib-base >=3.8.0
+    - numpy >=1.26.0
 
 test:
   imports:
