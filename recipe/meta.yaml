@@ -1,5 +1,5 @@
 {% set name = "cmyt" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.4" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cmyt-{{ version }}.tar.gz
-  sha256: cf308415401c615dffded3033be575373553573740298e44ef4b016ffd99a9be
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/cmyt-{{ version }}.tar.gz
+  sha256: 3cb83424adf95337840d9dd6eef5f0e2f6d53e9618cd11a2cb31218227e40b27
 
 build:
   number: 0
