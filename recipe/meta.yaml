@@ -11,14 +11,14 @@ source:
   sha256: cf308415401c615dffded3033be575373553573740298e44ef4b016ffd99a9be
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - python {{ python_min }}
-    - hatchling
+    - flit-core >=3.11,<5
     - pip
   run:
     - python >={{ python_min }}
