@@ -1,0 +1,50 @@
+schema_version: 1
+
+context:
+  name: cmyt
+  version: "2.0.4"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/cmyt-${{ version }}.tar.gz
+  sha256: 3cb83424adf95337840d9dd6eef5f0e2f6d53e9618cd11a2cb31218227e40b27
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - flit-core >=3.11,<5
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - matplotlib-base >=3.8.0
+    - numpy >=1.26.0,<3
+
+tests:
+  - python:
+      imports:
+        - cmyt
+        - cmyt.colormaps
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: A collection of Matplotlib colormaps from the yt project
+  license: BSD-3-Clause
+  license_file: LICENSE
+  homepage: https://github.com/yt-project/yt
+  repository: https://github.com/yt-project/cmyt/
+
+extra:
+  recipe-maintainers:
+    - neutrinoceros
+    - matthewturk
